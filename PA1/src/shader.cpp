@@ -38,7 +38,7 @@ bool Shader::AddShader(GLenum ShaderType, assets asset)
   std::string s;
   std::ifstream fileIn;
 
-  if(ShaderType == GL_VERTEX_SHADER) //READ GLSL FILE IDIOT
+  if(ShaderType == GL_VERTEX_SHADER)
   {
     fileIn.open(asset.vFile);
     s = std::string( std::istreambuf_iterator<char>(fileIn),

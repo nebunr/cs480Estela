@@ -1,5 +1,4 @@
 #include <iostream>
-
 #include <string.h>
 
 #include "engine.h"
@@ -9,9 +8,6 @@
 int main(int argc, char **argv)
 {
   // Start an engine and run it then cleanup after
-  // TAKE CMD LINE ARGS HERE OR MAYBE ELSEWHERE
-  // read from GLSL/.txt file
-
   // How to run after make: 
   // ./Tutorial -v vertexfile -f fragmentfile
   // ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
@@ -21,7 +17,6 @@ int main(int argc, char **argv)
     if(argv[2])
     {
       //../assets/vertex_shader.txt 
-      //set argv[2]
       asset.vFile = argv[2];
     }
   }
@@ -30,7 +25,6 @@ int main(int argc, char **argv)
     if(argv[4])
     {
       //../assets/fragment_shader.txt
-      //set argv[4]
       asset.fFile = argv[4];
     }
   }

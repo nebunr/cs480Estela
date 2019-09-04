@@ -46,6 +46,5 @@ make
 ### WAIT HOW DO I RUN THIS [cs480-680](https://github.com/cs480-680)???
 So after making or w/e, while in `/build`, do this:
 ```bash
-./Tutorial -v vertexfile -f fragmentfile
+./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
 ```
-BEN SWITCH THE FILE NAMES
