@@ -43,12 +43,14 @@ bool Shader::AddShader(GLenum ShaderType, assets asset)
     fileIn.open(asset.vFile);
     s = std::string( std::istreambuf_iterator<char>(fileIn),
                       std::istreambuf_iterator<char>());
+    fileIn.close();
   }
   else if(ShaderType == GL_FRAGMENT_SHADER)
   {
     fileIn.open(asset.fFile);
     s = std::string( std::istreambuf_iterator<char>(fileIn),
                       std::istreambuf_iterator<char>());
+    fileIn.close();
   }
 
   GLuint ShaderObj = glCreateShader(ShaderType);
