@@ -6,6 +6,7 @@
 
 #include "window.h"
 #include "graphics.h"
+#include "assets_headers.h"
 
 class Engine
 {
@@ -13,7 +14,7 @@ class Engine
     Engine(string name, int width, int height);
     Engine(string name);
     ~Engine();
-    bool Initialize();
+    bool Initialize(assets asset);
     void Run();
     void Keyboard();
     unsigned int getDT();

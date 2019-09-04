@@ -4,6 +4,7 @@
 #include <iostream>
 using namespace std;
 
+#include "assets_headers.h"
 #include "graphics_headers.h"
 #include "camera.h"
 #include "shader.h"
@@ -14,7 +15,7 @@ class Graphics
   public:
     Graphics();
     ~Graphics();
-    bool Initialize(int width, int height);
+    bool Initialize(int width, int height, assets asset);
     void Update(unsigned int dt);
     void Render();
 
