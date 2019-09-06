@@ -20,6 +20,8 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/rotate_vector.hpp>
 
+#define GLM_ENABLE_EXPERIMENTAL //for ECC use
+
 #define INVALID_UNIFORM_LOCATION 0x7fffffff
 
 struct Vertex
