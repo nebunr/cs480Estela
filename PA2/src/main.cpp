@@ -11,21 +11,23 @@ int main(int argc, char **argv)
   // How to run after make: 
   // ./Tutorial -v vertexfile -f fragmentfile
   // ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
+  // ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt 
   assets asset;
-  if(strcmp(argv[1], "-v") == 0)
+  for (int i = 1; i < argc; i++)
   {
-    if(argv[2])
+    if(strcmp(argv[i], "-v") == 0)
     {
-      //../assets/vertex_shader.txt 
-      asset.vFile = argv[2];
+      if(argv[i+1])
+      {
+        asset.vFile = argv[i+1];
+      }
     }
-  }
-  if(strcmp(argv[3], "-f") == 0)
-  {
-    if(argv[4])
+    else if(strcmp(argv[i], "-f") == 0)
     {
-      //../assets/fragment_shader.txt
-      asset.fFile = argv[4];
+      if(argv[i+1])
+      {
+        asset.fFile = argv[i+1];
+      }
     }
   }
   Engine *engine = new Engine("Benjamin Estela - PA1", 800, 600);

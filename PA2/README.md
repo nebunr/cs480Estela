@@ -17,6 +17,7 @@ make
 
 ### How to Run
 So after making or w/e, while in `/build`, do this:
+talk about flags that are in the other order
 ```bash
 ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
 ```
