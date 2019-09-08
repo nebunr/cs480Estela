@@ -63,6 +63,7 @@ void Engine::Run()
     while(SDL_PollEvent(&m_event) != 0)
     {
       Keyboard();
+      Mouse();
     }
 
     // Update and render the graphics
@@ -80,12 +81,46 @@ void Engine::Keyboard()
   {
     m_running = false;
   }
+  // handle key down events here for PA2
   else if (m_event.type == SDL_KEYDOWN)
   {
-    // handle key down events here
-    if (m_event.key.keysym.sym == SDLK_ESCAPE)
+    switch(m_event.key.keysym.sym)
     {
-      m_running = false;
+      case SDLK_ESCAPE:
+        m_running = false;
+        break;
+      case SDLK_a:  // Changes spping of cube
+        cout << "a ";
+        //
+        break;
+      default:
+        break;
+    }
+  }
+}
+void Engine::Mouse()
+{
+  // PA2 mouse inputs
+  // Looks for any mouse input down
+  if(m_event.type == SDL_MOUSEBUTTONDOWN)
+  {
+    // Looks for specific mouse click
+    switch(m_event.button.button)
+    {
+      case SDL_BUTTON_LEFT:
+        cout << "Left Click ";
+        //
+        break;
+      case SDL_BUTTON_RIGHT:
+        cout << "Right Click ";
+        //
+        break;
+      case SDL_BUTTON_MIDDLE:
+        cout << "Middle Click ";
+        //
+        break;
+      default:
+        break;
     }
   }
 }
