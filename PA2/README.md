@@ -23,13 +23,12 @@ OR
 ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt 
 ```
 
-### Keybindings
+### Keybind and Mouse
 | Input         | Output        |
 | ------------- |:-------------:|
-| Left Click    | M1            |
-| Right Click   | M2            |
-| Middle Click  | M3            |
-| <kbd>A</kbd>  | A             |
-| <kbd>S</kbd>  | S             |
-| <kbd>D</kbd>  | D             |
-| <kbd>F</kbd>  | F             |
+| Left Click    | Change orbit direction            |
+| Right Click   | Change rotation direction             |
+| Middle Click  | Change orbit and rotation direction            |
+| <kbd>A</kbd>  | Change orbit direction             |
+| <kbd>S</kbd>  | Change rotation direction             |
+| <kbd>D</kbd>  | Change orbit and rotation direction             |
