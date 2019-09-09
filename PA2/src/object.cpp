@@ -138,13 +138,14 @@ void Object::Input(char input)
     case 'r':
       break;
     case 'a': // Keyboard inputs by char
-      //orbit_speed *= 1.1;
+      rotation_dir *= -1;
       break;
     case 's':
-      //orbit_speed /= 1.1;
+      orbit_dir *= -1;
       break;
     case 'd':
-      //rotation_speed *= 1.01;
+      rotation_dir *= -1;
+      orbit_dir *= -1;
       break;
     case 'f':
       //rotation_speed /= 1.01;
