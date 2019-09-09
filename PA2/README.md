@@ -14,7 +14,6 @@ make
 
 ### How to Run
 So after making or w/e, while in `/build`, do this:
-talk about flags that are in the other order
 ```bash
 ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
 ```
@@ -22,6 +21,7 @@ OR
 ```bash
 ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt 
 ```
+Flags for -v (vertex file) and -f (fragment file) can be in either order but must be included.
 
 ### Keybind and Mouse
 | Input         | Output        |
