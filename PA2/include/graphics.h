@@ -18,6 +18,7 @@ class Graphics
     bool Initialize(int width, int height, assets asset);
     void Update(unsigned int dt);
     void Render();
+    void Input(char input);
 
   private:
     std::string ErrorString(GLenum error);

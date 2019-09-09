@@ -171,3 +171,7 @@ std::string Graphics::ErrorString(GLenum error)
   }
 }
 
+void Graphics::Input(char input)
+{
+  m_cube->Input(input);
+}

@@ -60,8 +60,19 @@ Object::Object()
     Indices[i] = Indices[i] - 1;
   }
 
-  angle = 0.0f;
+  orbit_angle = 2 * M_PI;
+  rotation_angle = 2 * M_PI;
 
+  orbit_speed = 2.0f;
+  rotation_speed = 1.5f;
+
+  orbit_dir = 1;
+  rotation_dir = 1;
+
+  translate_x = 0.0f;
+  translate_y = 0.0f;
+  translate_z = 0.0f;
+  
   glGenBuffers(1, &VB);
   glBindBuffer(GL_ARRAY_BUFFER, VB);
   glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);
@@ -77,13 +88,19 @@ Object::~Object()
   Indices.clear();
 }
 
-void Object::Update(unsigned int dt) //move the thing here
+void Object::Update(unsigned int dt) // move the object here
 {
-  angle += dt * M_PI/1000;
-  model = glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
+  rotation_angle += dt * M_PI/1000 * rotation_dir * rotation_speed;
 
-  model *= glm::translate(glm::mat4(1.0f), glm::vec3(5.0, 0.0, 0.0));
-  model *= glm::rotate(glm::mat4(1.0f), (angle), glm::vec3(0.0, 1.0, 0.0));
+  orbit_angle += dt * M_PI/500 * orbit_dir * orbit_speed;
+  
+  translate_x = 2 * cos( orbit_angle );
+  translate_y = 0.0f;
+  translate_z = 2 * sin( orbit_angle );
+
+  model_rotate = glm::rotate(glm::mat4(1.0f), (rotation_angle), glm::vec3(0.0, 1.0, 0.0));
+  model_translate = glm::translate(glm::mat4(1.0f), glm::vec3(translate_x, translate_y, translate_z));
+  model = model_rotate * model_translate;
 }
 
 glm::mat4 Object::GetModel()
@@ -108,3 +125,41 @@ void Object::Render()
   glDisableVertexAttribArray(1);
 }
 
+void Object::Input(char input)
+{
+  switch(input)
+  {
+    case 'q':
+      break;
+    case 'w':
+      break;
+    case 'e':
+      break;
+    case 'r':
+      break;
+    case 'a': // Keyboard inputs by char
+      //orbit_speed *= 1.1;
+      break;
+    case 's':
+      //orbit_speed /= 1.1;
+      break;
+    case 'd':
+      //rotation_speed *= 1.01;
+      break;
+    case 'f':
+      //rotation_speed /= 1.01;
+      break;
+    case '1': // Left Click
+      rotation_dir *= -1;
+      break;
+    case '2': // Right Click
+      orbit_dir *= -1;
+      break;
+    case '3': // Middle Click
+      rotation_dir *= -1;
+      orbit_dir *= -1;
+      break;      
+    default:
+      break;
+  }
+}

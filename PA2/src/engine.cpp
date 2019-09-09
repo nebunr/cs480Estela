@@ -1,5 +1,8 @@
 
-#include "engine.h"
+//#include "engine.h"
+// "engine.h" was calling PA1's engine.h
+#include "../../PA2/include/engine.h"
+
 
 Engine::Engine(string name, int width, int height)
 {
@@ -59,7 +62,7 @@ void Engine::Run()
     // Update the DT
     m_DT = getDT();
 
-    // Check the keyboard input
+    // Check the keyboard and mouse input
     while(SDL_PollEvent(&m_event) != 0)
     {
       Keyboard();
@@ -81,7 +84,7 @@ void Engine::Keyboard()
   {
     m_running = false;
   }
-  // handle key down events here for PA2
+  // handles key down events for PA2
   else if (m_event.type == SDL_KEYDOWN)
   {
     switch(m_event.key.keysym.sym)
@@ -89,15 +92,36 @@ void Engine::Keyboard()
       case SDLK_ESCAPE:
         m_running = false;
         break;
-      case SDLK_a:  // Changes spping of cube
-        cout << "a ";
-        //
+      case SDLK_q:
+        m_graphics->Input('q');
+        break;
+      case SDLK_w:
+        m_graphics->Input('w');
+        break;
+      case SDLK_e:
+        m_graphics->Input('e');
+        break;
+      case SDLK_r:
+        m_graphics->Input('r');  
+        break;
+      case SDLK_a:
+        m_graphics->Input('a');
+        break;
+      case SDLK_s:
+        m_graphics->Input('s');
+        break;
+      case SDLK_d:
+        m_graphics->Input('d');
+        break;
+      case SDLK_f:
+        m_graphics->Input('f');
         break;
       default:
         break;
     }
   }
 }
+
 void Engine::Mouse()
 {
   // PA2 mouse inputs
@@ -108,16 +132,13 @@ void Engine::Mouse()
     switch(m_event.button.button)
     {
       case SDL_BUTTON_LEFT:
-        cout << "Left Click ";
-        //
+        m_graphics->Input('1');
         break;
       case SDL_BUTTON_RIGHT:
-        cout << "Right Click ";
-        //
+        m_graphics->Input('2');
         break;
       case SDL_BUTTON_MIDDLE:
-        cout << "Middle Click ";
-        //
+        m_graphics->Input('3');
         break;
       default:
         break;

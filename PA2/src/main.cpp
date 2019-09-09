@@ -30,8 +30,8 @@ int main(int argc, char **argv)
       }
     }
   }
-  Engine *engine = new Engine("Benjamin Estela - PA1", 800, 600);
-  printf("Starting PA1 (ESC to exit)\n");
+  Engine *engine = new Engine("Benjamin Estela - PA2", 800, 600);
+  printf("Starting PA2 (ESC to exit)\n");
   if(!engine->Initialize(asset))
   {
     printf("The engine failed to start.\n");
