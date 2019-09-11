@@ -23,7 +23,7 @@ OR
 ```
 Flags for -v (vertex file) and -f (fragment file) can be in either order but must be included.
 
-### Keybind and Mouse
+### Keyboard and Mouse Binds
 | Input         | Output        |
 | ------------- |:-------------:|
 | Left Click    | Flips orbit direction            |
@@ -34,3 +34,5 @@ Flags for -v (vertex file) and -f (fragment file) can be in either order but mus
 | <kbd>D</kbd>  | Flips orbit and rotation direction             |
 | <kbd>Q</kbd>  | Changes/pauses rotation direction             |
 | <kbd>W</kbd>  | Changes/pauses orbit direction             |
+
+Note: <kbd>Q</kbd> and <kbd>W</kbd> both set the rotation and orbits to be clockwise, counter-clockwise, and none (paused).
