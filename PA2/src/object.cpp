@@ -91,7 +91,6 @@ Object::~Object()
 void Object::Update(unsigned int dt) // move the object here
 {
   rotation_angle += dt * M_PI/1000 * rotation_dir * rotation_speed;
-
   orbit_angle += dt * M_PI/500 * orbit_dir * orbit_speed;
   
   translate_x = 2 * cos( orbit_angle );
@@ -129,15 +128,39 @@ void Object::Input(char input)
 {
   switch(input)
   {
-    case 'q':
+    case 'q': // Keyboard inputs by char
+      if (rotation_dir == -1) // Changes rotation dir
+      {
+        rotation_dir = 0; // Paused
+      }
+      else if (rotation_dir == 0)
+      {
+        rotation_dir = 1; // Clockwise
+      }
+      else if (rotation_dir == 1)
+      {
+        rotation_dir = -1; // Counter-Clockwise
+      }
       break;
     case 'w':
+      if (orbit_dir == -1) // Changes orbit dir
+      {
+        orbit_dir = 0; // Paused
+      }
+      else if (orbit_dir == 0)
+      {
+        orbit_dir = 1; // Counter-Clockwise
+      }
+      else if (orbit_dir == 1)
+      {
+        orbit_dir = -1; // Clockwise
+      }
       break;
     case 'e':
       break;
     case 'r':
       break;
-    case 'a': // Keyboard inputs by char
+    case 'a':
       rotation_dir *= -1;
       break;
     case 's':

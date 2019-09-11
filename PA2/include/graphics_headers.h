@@ -3,6 +3,8 @@
 
 #include <iostream>
 
+#define GLM_ENABLE_EXPERIMENTAL //for ECC use
+
 #define GL_DO_NOT_WARN_IF_MULTI_GL_VERSION_HEADERS_INCLUDED
 
 #if defined(__APPLE__) || defined(MACOSX)
@@ -19,8 +21,6 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/rotate_vector.hpp>
-
-#define GLM_ENABLE_EXPERIMENTAL //for ECC use
 
 #define INVALID_UNIFORM_LOCATION 0x7fffffff
 
