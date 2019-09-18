@@ -63,8 +63,8 @@ Object::Object()
   orbit_angle = 2 * M_PI;
   rotation_angle = 2 * M_PI;
 
-  orbit_speed = 2.0f;
-  rotation_speed = 1.5f;
+  orbit_speed = 1.0f;
+  rotation_speed = 1.0f;
 
   orbit_dir = 1;
   rotation_dir = 1;
@@ -88,25 +88,42 @@ Object::~Object()
   Indices.clear();
 }
 
-void Object::Update(unsigned int dt) // move the object here
+void Object::Update(unsigned int dt, int object_num, glm::mat4 planet) // move the object here
 {
   rotation_angle += dt * M_PI/1000 * rotation_dir * rotation_speed;
-  orbit_angle += dt * M_PI/500 * orbit_dir * orbit_speed;
-  
-  translate_x = 2 * cos( orbit_angle );
+  orbit_angle += dt * M_PI/1000 * orbit_dir * orbit_speed;
+    
+  translate_x = 3 * cos( orbit_angle );
   translate_y = 0.0f;
-  translate_z = 2 * sin( orbit_angle );
+  translate_z = 3 * sin( orbit_angle );
 
   model_rotate = glm::rotate(glm::mat4(1.0f), (rotation_angle), glm::vec3(0.0, 1.0, 0.0));
   model_translate = glm::translate(glm::mat4(1.0f), glm::vec3(translate_x, translate_y, translate_z));
-  model = model_rotate * model_translate;
+
+  model_location = model_translate;
+
+  if(object_num == 1) //m_cube/planet
+  {
+    model = model_translate * model_rotate;
+  }
+  else if(object_num == 2) //m_moon
+  {
+    model = planet * model_translate * model_rotate * glm::scale(glm::mat4(1.0f), glm::vec3(0.5f));
+  }
+  else
+  {
+
+  }
 }
 
 glm::mat4 Object::GetModel()
 {
   return model;
 }
-
+glm::mat4 Object::GetLocation()
+{
+  return model_location;
+}
 void Object::Render()
 {
   glEnableVertexAttribArray(0);
@@ -124,66 +141,59 @@ void Object::Render()
   glDisableVertexAttribArray(1);
 }
 
-void Object::Input(char input)
+void Object::ChangeOrbit()
 {
-  switch(input)
+  if (orbit_dir == -1) // Changes orbit dir
   {
-    case 'q': // Keyboard inputs by char
-      if (rotation_dir == -1) // Changes rotation dir
-      {
-        rotation_dir = 0; // Paused
-      }
-      else if (rotation_dir == 0)
-      {
-        rotation_dir = 1; // Clockwise
-      }
-      else if (rotation_dir == 1)
-      {
-        rotation_dir = -1; // Counter-Clockwise
-      }
-      break;
-    case 'w':
-      if (orbit_dir == -1) // Changes orbit dir
-      {
-        orbit_dir = 0; // Paused
-      }
-      else if (orbit_dir == 0)
-      {
-        orbit_dir = 1; // Counter-Clockwise
-      }
-      else if (orbit_dir == 1)
-      {
-        orbit_dir = -1; // Clockwise
-      }
-      break;
-    case 'e':
-      break;
-    case 'r':
-      break;
-    case 'a':
-      rotation_dir *= -1;
-      break;
-    case 's':
-      orbit_dir *= -1;
-      break;
-    case 'd':
-      rotation_dir *= -1;
-      orbit_dir *= -1;
-      break;
-    case 'f':
-      //rotation_speed /= 1.01;
-      break;
-    case '1': // Left Click
-      rotation_dir *= -1;
-      break;
-    case '2': // Right Click
-      orbit_dir *= -1;
-      break;
-    case '3': // Middle Click
-      rotation_dir *= -1;
-      orbit_dir *= -1;
-      break;      
-    default:
-      break;
+    orbit_dir = 0; // Paused
+    std::cout << "Orbit Paused" << std::endl;
   }
+  else if (orbit_dir == 0)
+  {
+    orbit_dir = 1; // Clockwise
+    std::cout << "Orbit Clockwise" << std::endl;
+  }
+  else if (orbit_dir == 1)
+  {
+    orbit_dir = -1; // Counter-Clockwise
+    std::cout << "Orbit Counter-Clockwise" << std::endl;
+  }
+}
+
+void Object::ChangeRotation()
+{
+  if (rotation_dir == -1) // Changes rotation dir
+  {
+    rotation_dir = 0; // Paused
+    std::cout << "Rotation Paused" << std::endl;
+  }
+  else if (rotation_dir == 0)
+  {
+    rotation_dir = 1; // Counter-Clockwise
+    std::cout << "Rotation Counter-Clockwise" << std::endl;
+  }
+  else if (rotation_dir == 1)
+  {
+    rotation_dir = -1; // Clockwise
+    std::cout << "Rotation Clockwise" << std::endl;
+  }
+}
+
+void Object::ChangeSpeedOrbit(float speed)
+{
+  orbit_speed += speed;
+  std::cout << "Changing Orbit Speed By " << speed << std::endl;
+}
+
+void Object::ChangeSpeedRotation(float speed)
+{
+  rotation_speed += speed;
+  std::cout << "Changing Rotation Speed By " << speed << std::endl;
+}
+
+void Object::ResetSpeed()
+{
+  orbit_speed = 1.0f;
+  rotation_speed = 1.0f;
+  std::cout << "Rotation and Orbit has been reset to original speeds." << std::endl;
 }

@@ -1,7 +1,7 @@
 
 //#include "engine.h"
 // "engine.h" was calling PA1's engine.h
-#include "../../PA2/include/engine.h"
+#include "../../PA3/include/engine.h"
 
 
 Engine::Engine(string name, int width, int height)
@@ -99,7 +99,7 @@ void Engine::Keyboard()
         m_graphics->Input('w');
         break;
       case SDLK_e:
-        m_graphics->Input('e');
+        //m_graphics->Input('e');
         break;
       case SDLK_r:
         m_graphics->Input('r');  
@@ -132,13 +132,13 @@ void Engine::Mouse()
     switch(m_event.button.button)
     {
       case SDL_BUTTON_LEFT:
-        m_graphics->Input('1');
+        m_graphics->Input(1);
         break;
       case SDL_BUTTON_RIGHT:
-        m_graphics->Input('2');
+        m_graphics->Input(2);
         break;
       case SDL_BUTTON_MIDDLE:
-        m_graphics->Input('3');
+        m_graphics->Input(3);
         break;
       default:
         break;
