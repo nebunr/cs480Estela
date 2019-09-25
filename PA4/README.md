@@ -33,6 +33,7 @@ Then...
 ```
 
 All flags, -v (vertex file), -f (fragment file), and -b (object file) ,can be in either order but must be included.
+Can replace tray.obj with whatever .obj you want (ex. dragon.obj).
 
 ## Keyboard and Mouse Binds
 | Input         | Output        |
