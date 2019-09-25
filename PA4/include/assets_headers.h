@@ -3,7 +3,8 @@
 #include <iostream>
 struct assets
 {
-    std::string vFile;
-    std::string fFile;
+    std::string vFile;  // vertex
+    std::string fFile;  // fragment
+    std::string bFile;  // object
 };
 #endif /* ASSETS_HEADERS_H */

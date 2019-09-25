@@ -1,5 +1,5 @@
 //#include "graphics.h"
-#include "../../PA3/include/graphics.h"
+#include "../../PA4/include/graphics.h"
 
 Graphics::Graphics()
 {
@@ -46,9 +46,7 @@ bool Graphics::Initialize(int width, int height, assets asset)
   }
 
   // Create the object
-  m_cube = new Object();
-  // Create the moon
-  m_moon = new Object();
+  m_cube = new Object(asset);
 
   // Set up the shaders
   m_shader = new Shader();
@@ -114,7 +112,6 @@ void Graphics::Update(unsigned int dt)
 {
   // Update the object
   m_cube->Update(dt, 1, m_cube->GetLocation());
-  m_moon->Update(dt, 2, m_cube->GetLocation());
 }
 
 void Graphics::Render()
@@ -134,8 +131,6 @@ void Graphics::Render()
   glUniformMatrix4fv(m_modelMatrix, 1, GL_FALSE, glm::value_ptr(m_cube->GetModel()));
   m_cube->Render();
 
-  glUniformMatrix4fv(m_modelMatrix, 1, GL_FALSE, glm::value_ptr(m_moon->GetModel()));
-  m_moon->Render();
 
   // Get any errors from OpenGL
   auto error = glGetError();
@@ -183,43 +178,7 @@ void Graphics::Input(char input)
 {
   switch (input)
   {
-  case 'q':
-    std::cout << "Cube/Planet ";
-    m_cube->ChangeRotation();
-    break;
-  case 'w':
-    std::cout << "Cube/Planet ";
-    m_cube->ChangeOrbit();
-    break;
-  case 'a':
-    std::cout << "Moon ";
-    m_moon->ChangeSpeedRotation(0.5f);
-    break;
-  case 's':
-    std::cout << "Moon ";
-    m_moon->ChangeSpeedRotation(-0.5f);
-    break;
-  case 'd':
-    std::cout << "Moon ";
-    m_moon->ChangeSpeedOrbit(0.25f);
-    break;
-  case 'f':
-    std::cout << "Moon ";
-    m_moon->ChangeSpeedOrbit(-0.25f);
-    break;
-  case 'r':
-    std::cout << "Moon ";
-    m_moon->ResetSpeed();
-    break;
-  case 1: // Left Click
-    std::cout << "Moon ";
-    m_moon->ChangeRotation();
-    break;
-  case 2: // Right Click
-    std::cout << "Moon ";
-    m_moon->ChangeOrbit();
-    break;
-  default:
-    break;
+    default:
+      break;
   }
 }

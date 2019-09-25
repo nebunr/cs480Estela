@@ -9,9 +9,8 @@ int main(int argc, char **argv)
 {
   // Start an engine and run it then cleanup after
   // How to run after make: 
-  // ./Tutorial -v vertexfile -f fragmentfile
-  // ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
-  // ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt 
+  // ./Tutorial -f fragmentfile -v vertexfile -b objectfile
+  // ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt -b ../assets/object.obj
   assets asset;
   for (int i = 1; i < argc; i++)
   {
@@ -29,9 +28,16 @@ int main(int argc, char **argv)
         asset.fFile = argv[i+1];
       }
     }
+    else if(strcmp(argv[i], "-b") == 0)
+    {
+      if(argv[i+1])
+      {
+        asset.bFile = argv[i+1];
+      }
+    }
   }
-  Engine *engine = new Engine("Benjamin Estela - PA3", 800, 600);
-  printf("Starting PA3 (ESC to exit)\n");
+  Engine *engine = new Engine("Benjamin Estela - PA4", 800, 600);
+  printf("Starting.\n");
   if(!engine->Initialize(asset))
   {
     printf("The engine failed to start.\n");

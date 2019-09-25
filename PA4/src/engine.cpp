@@ -1,7 +1,7 @@
 
 //#include "engine.h"
 // "engine.h" was calling PA1's engine.h
-#include "../../PA3/include/engine.h"
+#include "../../PA4/include/engine.h"
 
 
 Engine::Engine(string name, int width, int height)
@@ -90,31 +90,8 @@ void Engine::Keyboard()
     switch(m_event.key.keysym.sym)
     {
       case SDLK_ESCAPE:
+        printf("Closing.\n");
         m_running = false;
-        break;
-      case SDLK_q:
-        m_graphics->Input('q');
-        break;
-      case SDLK_w:
-        m_graphics->Input('w');
-        break;
-      case SDLK_e:
-        //m_graphics->Input('e');
-        break;
-      case SDLK_r:
-        m_graphics->Input('r');  
-        break;
-      case SDLK_a:
-        m_graphics->Input('a');
-        break;
-      case SDLK_s:
-        m_graphics->Input('s');
-        break;
-      case SDLK_d:
-        m_graphics->Input('d');
-        break;
-      case SDLK_f:
-        m_graphics->Input('f');
         break;
       default:
         break;
@@ -131,15 +108,6 @@ void Engine::Mouse()
     // Looks for specific mouse click
     switch(m_event.button.button)
     {
-      case SDL_BUTTON_LEFT:
-        m_graphics->Input(1);
-        break;
-      case SDL_BUTTON_RIGHT:
-        m_graphics->Input(2);
-        break;
-      case SDL_BUTTON_MIDDLE:
-        m_graphics->Input(3);
-        break;
       default:
         break;
     }

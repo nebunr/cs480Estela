@@ -31,14 +31,13 @@ Then...
 ```bash
 ./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
 ```
-OR
-```bash
-./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt 
-```
-Flags for -v (vertex file) and -f (fragment file) can be in either order but must be included.
+
+All flags, -v (vertex file), -f (fragment file), and -b (object file) ,can be in either order but must be included.
 
 ## Keyboard and Mouse Binds
-N/A
+| Input         | Output        |
+| ------------- |:-------------:|
+| <kbd>Escape</kbd>  | Exit |
 
 ## Extra Credit
 N/A

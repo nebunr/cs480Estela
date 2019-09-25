@@ -1,78 +1,14 @@
 #include "object.h"
 
-Object::Object()
+Object::Object(assets asset)
 {  
-  /*
-    # Blender File for a Cube
-    o Cube
-    v 1.000000 -1.000000 -1.000000
-    v 1.000000 -1.000000 1.000000
-    v -1.000000 -1.000000 1.000000
-    v -1.000000 -1.000000 -1.000000
-    v 1.000000 1.000000 -0.999999
-    v 0.999999 1.000000 1.000001
-    v -1.000000 1.000000 1.000000
-    v -1.000000 1.000000 -1.000000
-    s off
-    f 2 3 4
-    f 8 7 6
-    f 1 5 6
-    f 2 6 7
-    f 7 8 4
-    f 1 4 8
-    f 1 2 4
-    f 5 8 6
-    f 2 1 6
-    f 3 2 7
-    f 3 7 4
-    f 5 1 8
-  */
-
-  Vertices = {
-    {{1.0f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}},
-    {{1.0f, -1.0f, 1.0f}, {1.0f, 0.0f, 0.0f}},
-    {{-1.0f, -1.0f, 1.0f}, {0.0f, 1.0f, 0.0f}},
-    {{-1.0f, -1.0f, -1.0f}, {0.0f, 0.0f, 1.0f}},
-    {{1.0f, 1.0f, -1.0f}, {1.0f, 1.0f, 0.0f}},
-    {{1.0f, 1.0f, 1.0f}, {1.0f, 0.0f, 1.0f}},
-    {{-1.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f}},
-    {{-1.0f, 1.0f, -1.0f}, {1.0f, 1.0f, 1.0f}}
-  };
-
-  Indices = {
-    2, 3, 4,
-    8, 7, 6,
-    1, 5, 6,
-    2, 6, 7,
-    7, 8, 4,
-    1, 4, 8,
-    1, 2, 4,
-    5, 8, 6,
-    2, 1, 6,
-    3, 2, 7,
-    3, 7, 4,
-    5, 1, 8
-  };
+  ReadObj(asset);
 
   // The index works at a 0th index
   for(unsigned int i = 0; i < Indices.size(); i++)
   {
     Indices[i] = Indices[i] - 1;
   }
-
-  orbit_angle = 2 * M_PI;
-  rotation_angle = 2 * M_PI;
-
-  orbit_speed = 1.0f;
-  rotation_speed = 1.0f;
-
-  orbit_dir = 1;
-  rotation_dir = 1;
-
-  translate_x = 0.0f;
-  translate_y = 0.0f;
-  translate_z = 0.0f;
-  
   glGenBuffers(1, &VB);
   glBindBuffer(GL_ARRAY_BUFFER, VB);
   glBufferData(GL_ARRAY_BUFFER, sizeof(Vertex) * Vertices.size(), &Vertices[0], GL_STATIC_DRAW);
@@ -88,32 +24,97 @@ Object::~Object()
   Indices.clear();
 }
 
+void Object::ReadObj(assets asset)
+{
+  std::ifstream fileObj;
+  fileObj.open(asset.bFile);  
+
+  std::string lineVar; // Read through lines. [0] is the start of a newline
+  std::string temp; // Used to get through the file
+
+  while(!fileObj.eof())
+  {
+    fileObj >> lineVar;
+    while(fileObj.peek() == '\n' || fileObj.peek() == ' ')
+    {
+      fileObj.get();
+    }
+    // Use these if-else statements once you reach a newline
+    // comments
+    if(lineVar[0] == '#')
+    {
+      std::getline(fileObj, temp);
+    }
+    // object name (ex. Cube)
+    else if(lineVar[0] == 'o')
+    {
+      std::getline(fileObj, temp);
+    }
+    // vertex
+    else if(lineVar[0] == 'v')
+    {
+      glm::vec3 vertex;
+      glm::vec3 color;
+      color = {0.0f, 0.5f, 0.0f}; // lime green
+      fileObj >> vertex.x;
+      fileObj >> vertex.y;
+      fileObj >> vertex.z;
+      Vertices.push_back({vertex, color});
+      std::getline(fileObj, temp);
+    }
+    // smooth shading (off).
+    else if(lineVar[0] == 's')
+    {
+      std::getline(fileObj, temp);
+    }
+    // face
+    else if(lineVar[0] == 'f')
+    {
+      unsigned int x, y, z;
+      std::getline(fileObj, temp);
+      std::stringstream ss(temp);
+      if(temp.find("//") != std::string::npos)
+      {
+        ss >> x;
+        ss >> temp;
+        ss >> y;
+        ss >> temp;
+        ss >> z;
+        ss >> temp;
+      }
+      else if (temp.find("/") != std::string::npos)
+      {
+        ss >> x;
+        ss >> temp;
+        ss >> y;
+        ss >> temp;
+        ss >> z;
+        ss >> temp;
+      }
+      else
+      {
+        ss >> x;
+        ss >> y;
+        ss >> z;
+      }
+      
+
+
+      Indices.push_back(x);
+      Indices.push_back(y);
+      Indices.push_back(z);
+    }
+    else
+    {
+      std::getline(fileObj, temp);
+    }
+  }
+  fileObj.close();
+}
+
 void Object::Update(unsigned int dt, int object_num, glm::mat4 planet) // move the object here
 {
-  rotation_angle += dt * M_PI/1000 * rotation_dir * rotation_speed;
-  orbit_angle += dt * M_PI/1000 * orbit_dir * orbit_speed;
-    
-  translate_x = 3 * cos( orbit_angle );
-  translate_y = 0.0f;
-  translate_z = 3 * sin( orbit_angle );
-
-  model_rotate = glm::rotate(glm::mat4(1.0f), (rotation_angle), glm::vec3(0.0, 1.0, 0.0));
-  model_translate = glm::translate(glm::mat4(1.0f), glm::vec3(translate_x, translate_y, translate_z));
-
-  model_location = model_translate;
-
-  if(object_num == 1) //m_cube/planet
-  {
-    model = model_translate * model_rotate;
-  }
-  else if(object_num == 2) //m_moon
-  {
-    model = planet * model_translate * model_rotate * glm::scale(glm::mat4(1.0f), glm::vec3(0.5f));
-  }
-  else
-  {
-
-  }
+  // Cleared function for PA4
 }
 
 glm::mat4 Object::GetModel()
@@ -139,61 +140,4 @@ void Object::Render()
 
   glDisableVertexAttribArray(0);
   glDisableVertexAttribArray(1);
-}
-
-void Object::ChangeOrbit()
-{
-  if (orbit_dir == -1) // Changes orbit dir
-  {
-    orbit_dir = 0; // Paused
-    std::cout << "Orbit Paused" << std::endl;
-  }
-  else if (orbit_dir == 0)
-  {
-    orbit_dir = 1; // Clockwise
-    std::cout << "Orbit Clockwise" << std::endl;
-  }
-  else if (orbit_dir == 1)
-  {
-    orbit_dir = -1; // Counter-Clockwise
-    std::cout << "Orbit Counter-Clockwise" << std::endl;
-  }
-}
-
-void Object::ChangeRotation()
-{
-  if (rotation_dir == -1) // Changes rotation dir
-  {
-    rotation_dir = 0; // Paused
-    std::cout << "Rotation Paused" << std::endl;
-  }
-  else if (rotation_dir == 0)
-  {
-    rotation_dir = 1; // Counter-Clockwise
-    std::cout << "Rotation Counter-Clockwise" << std::endl;
-  }
-  else if (rotation_dir == 1)
-  {
-    rotation_dir = -1; // Clockwise
-    std::cout << "Rotation Clockwise" << std::endl;
-  }
-}
-
-void Object::ChangeSpeedOrbit(float speed)
-{
-  orbit_speed += speed;
-  std::cout << "Changing Orbit Speed By " << speed << std::endl;
-}
-
-void Object::ChangeSpeedRotation(float speed)
-{
-  rotation_speed += speed;
-  std::cout << "Changing Rotation Speed By " << speed << std::endl;
-}
-
-void Object::ResetSpeed()
-{
-  orbit_speed = 1.0f;
-  rotation_speed = 1.0f;
-  std::cout << "Rotation and Orbit has been reset to original speeds." << std::endl;
 }
