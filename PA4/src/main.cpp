@@ -10,7 +10,7 @@ int main(int argc, char **argv)
   // Start an engine and run it then cleanup after
   // How to run after make: 
   // ./Tutorial -f fragmentfile -v vertexfile -b objectfile
-  // ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt -b ../assets/object.obj
+  // ./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt -b ../assets/tray.obj
   assets asset;
   for (int i = 1; i < argc; i++)
   {

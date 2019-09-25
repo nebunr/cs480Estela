@@ -1,7 +1,7 @@
 # PA4: Model Loading by Benjamin Estela
 
 ## Project Description
-PA4
+In PA4, an object is created (tray.obj) in blender and is loaded into the project through the object's constructor. No objects move here as the point is to just load in the .obj file. Also all objects have a lime green color.
 
 ## Dependency Instructions
 For both of the operating systems to run this project installation of these three programs are required [GLEW](http://glew.sourceforge.net/), [GLM](http://glm.g-truc.net/0.9.7/index.html), and [SDL2](https://wiki.libsdl.org/Tutorials).
@@ -29,7 +29,7 @@ make
 ```
 Then...
 ```bash
-./Tutorial -v ../assets/vertex_shader.txt -f ../assets/fragment_shader.txt
+./Tutorial -f ../assets/fragment_shader.txt -v ../assets/vertex_shader.txt -b ../assets/tray.obj
 ```
 
 All flags, -v (vertex file), -f (fragment file), and -b (object file) ,can be in either order but must be included.
