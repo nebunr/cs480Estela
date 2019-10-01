@@ -1,4 +1,4 @@
-##PA5 Assimp Model Loader
+## PA5 Assimp Model Loader
 
 Please see [Jonathon Hewitt's Repository](https://github.com/zotlann) for the implementation
 
