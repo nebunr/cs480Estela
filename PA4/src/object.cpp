@@ -2,6 +2,32 @@
 
 Object::Object(assets asset)
 {  
+  /*
+  Vertices = {
+    {{1.0f, -1.0f, -1.0f}, {0.0f, 0.0f, 0.0f}},
+    {{1.0f, -1.0f, 1.0f}, {1.0f, 0.0f, 0.0f}},
+    {{-1.0f, -1.0f, 1.0f}, {0.0f, 1.0f, 0.0f}},
+    {{-1.0f, -1.0f, -1.0f}, {0.0f, 0.0f, 1.0f}},
+    {{1.0f, 1.0f, -1.0f}, {1.0f, 1.0f, 0.0f}},
+    {{1.0f, 1.0f, 1.0f}, {1.0f, 0.0f, 1.0f}},
+    {{-1.0f, 1.0f, 1.0f}, {0.0f, 1.0f, 1.0f}},
+    {{-1.0f, 1.0f, -1.0f}, {1.0f, 1.0f, 1.0f}}
+  };
+  Indices = {
+    2, 3, 4,
+    8, 7, 6,
+    1, 5, 6,
+    2, 6, 7,
+    7, 8, 4,
+    1, 4, 8,
+    1, 2, 4,
+    5, 8, 6,
+    2, 1, 6,
+    3, 2, 7,
+    3, 7, 4,
+    5, 1, 8
+  };
+  */
   ReadObj(asset);
 
   // The index works at a 0th index
@@ -26,70 +52,55 @@ Object::~Object()
 
 void Object::ReadObj(assets asset)
 {
-  std::ifstream fileObj;
-  fileObj.open(asset.bFile);  
+  std::ifstream fileObject;
+  fileObject.open(asset.bFile);  
+  if(!(fileObject.is_open()))
+  {
+    std::cerr << "Cannot open .obj file.\n";
+    return;
+  }
 
   std::string lineVar; // Read through lines. [0] is the start of a newline
-  std::string temp; // Used to get through the file
+  std::string readIn; // Used to get through the file
 
-  while(!fileObj.eof())
+
+  while(!fileObject.eof())
   {
-    fileObj >> lineVar;
-    while(fileObj.peek() == '\n' || fileObj.peek() == ' ')
-    {
-      fileObj.get();
-    }
-    // Use these if-else statements once you reach a newline
-    // comments
-    if(lineVar[0] == '#')
-    {
-      std::getline(fileObj, temp);
-    }
-    // object name (ex. Cube)
-    else if(lineVar[0] == 'o')
-    {
-      std::getline(fileObj, temp);
-    }
-    // vertex
-    else if(lineVar[0] == 'v')
+    std::getline(fileObject, readIn, ' ');
+
+    if(readIn.compare("v") == 0)
     {
       glm::vec3 vertex;
       glm::vec3 color;
       color = {0.0f, 0.5f, 0.0f}; // lime green
-      fileObj >> vertex.x;
-      fileObj >> vertex.y;
-      fileObj >> vertex.z;
+      fileObject >> vertex.x;
+      fileObject >> vertex.y;
+      fileObject >> vertex.z;
       Vertices.push_back({vertex, color});
-      std::getline(fileObj, temp);
+      std::getline(fileObject, readIn, '\n');
     }
-    // smooth shading (off).
-    else if(lineVar[0] == 's')
-    {
-      std::getline(fileObj, temp);
-    }
-    // face
-    else if(lineVar[0] == 'f')
+    else if(readIn.compare("f") == 0)
     {
       unsigned int x, y, z;
-      std::getline(fileObj, temp);
-      std::stringstream ss(temp);
-      if(temp.find("//") != std::string::npos)
+      std::getline(fileObject, readIn);
+      std::stringstream ss(readIn);
+      if(readIn.find("//") != std::string::npos)
       {
         ss >> x;
-        ss >> temp;
+        ss >> readIn;
         ss >> y;
-        ss >> temp;
+        ss >> readIn;
         ss >> z;
-        ss >> temp;
+        ss >> readIn;
       }
-      else if (temp.find("/") != std::string::npos)
+      else if (readIn.find("/") != std::string::npos)
       {
         ss >> x;
-        ss >> temp;
+        ss >> readIn;
         ss >> y;
-        ss >> temp;
+        ss >> readIn;
         ss >> z;
-        ss >> temp;
+        ss >> readIn;
       }
       else
       {
@@ -97,24 +108,22 @@ void Object::ReadObj(assets asset)
         ss >> y;
         ss >> z;
       }
-      
-
-
       Indices.push_back(x);
       Indices.push_back(y);
       Indices.push_back(z);
     }
     else
     {
-      std::getline(fileObj, temp);
+      std::getline(fileObject, readIn, '\n');
     }
   }
-  fileObj.close();
+  fileObject.close();
 }
 
 void Object::Update(unsigned int dt, int object_num, glm::mat4 planet) // move the object here
 {
-  // Cleared function for PA4
+  // Cleared most of the function for PA4
+  model = glm::scale(glm::mat4(1.0f), glm::vec3(1.0f));
 }
 
 glm::mat4 Object::GetModel()
