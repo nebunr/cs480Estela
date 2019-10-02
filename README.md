@@ -9,4 +9,4 @@ PA0 and PA1 use [this](https://github.com/HPC-Vis/computer-graphics).
 **Group Members:**
 - [Benjamin Estela](https://github.com/nebunr)
 - [Sidney Inouye](https://github.com/sinouye)
-- [Jonathon Hewitt](https://github.com/zoltann)
+- [Jonathon Hewitt](https://github.com/zotlann)
