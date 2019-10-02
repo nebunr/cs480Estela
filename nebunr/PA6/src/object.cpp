@@ -43,6 +43,7 @@ Object::Object()
 
 Object::Object(char* object_config_filename,char* obj_filename,float scl)
 {  
+  //Magick::Blob blob;
   parseObjFile(obj_filename);
 
   glGenBuffers(1, &VB);

@@ -4,7 +4,7 @@ UNAME_S := $(shell uname -s)
 # Linux
 ifeq ($(UNAME_S), Linux)
 	CC=g++
-	LIBS=-lSDL2 -lGLEW -lGL -lassimp
+	LIBS=-lSDL2 -lGLEW -lGL -lassimp `Magick++-config --cppflags --cxxflags --ldflags --libs`
 # Mac
 else
 	CC=clang++
@@ -16,13 +16,13 @@ endif
 #PATHL=-L/usr/local/lib/
 
 #Compiler Flags
-CXXFLAGS=-g -Wall -std=c++0x `Magick++-config --cppflags --cxxflags`
+CXXFLAGS=-g -Wall -std=c++0x `Magick++-config --cppflags --cxxflags --ldflags --libs`
 
 # .o Compilation
 O_FILES=main.o camera.o engine.o graphics.o object.o shader.o window.o
 
 # Point to includes of local directories
-INDLUDES=-I../include `Magick++-config --ldflags --libs`
+INDLUDES=-I../include
 
 # To Ben, make sure to `make clean; make`
 
