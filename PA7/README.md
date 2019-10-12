@@ -1,4 +1,4 @@
-## PA6: Assimp with Textures
+## PA7: Solar System
 
 Please see [Jonathon Hewitt's Repository](https://github.com/zotlann/cs480Hewitt) for the implementation
 
