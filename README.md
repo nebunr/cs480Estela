@@ -11,5 +11,3 @@ PA0 and PA1 use [this](https://github.com/HPC-Vis/computer-graphics).
 - [Sidney Inouye](https://github.com/sinouye)
 - [Jonathon Hewitt](https://github.com/zotlann)
 
-## [nebunr](https://github.com/nebunr/cs480Estela/nebunr)
-Seperate folder for Ben's use (not for grading).
