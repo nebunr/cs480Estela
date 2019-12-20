@@ -21,7 +21,6 @@ O_FILES=main.o camera.o engine.o graphics.o object.o shader.o window.o tinyxml2.
 # Point to includes of local directories
 INCLUDES=-I../include -I/usr/include/bullet #-I/usr/include/x86_64-linux-gnu/ImageMagick-6/ -I/usr/include/ImageMagick-6/
 
-
 all: $(O_FILES)
 	$(CC) $(CXXFLAGS) -o PA10 $(O_FILES) $(LIBS) #$(PATHI) $(PATHL)
 

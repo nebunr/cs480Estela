@@ -1,0 +1,15 @@
+<object>
+	<model>../assets/objects/cylinder.obj</model>
+	<texture>../assets/textures/cylinder.jpg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>false</kinematic>
+	<shape>mesh</shape>
+	<location-x>-4</location-x>
+	<location-y>1</location-y>
+	<location-z>-1</location-z>
+	<width>2.5</width>
+	<height>2.5</height>
+	<length>8</length>
+	<scale>.75</scale>
+	<mass>0</mass>
+</object>

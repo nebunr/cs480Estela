@@ -1,0 +1,11 @@
+<config>
+	<vshader>../assets/shaders/vshader</vshader>
+	<fshader>../assets/shaders/fshader</fshader>
+	<windowname>bullet-test</windowname>
+	<w>1024</w>
+	<h>768</h>
+	<ball>../assets/configs/bullet_test/ball.xml</ball>
+	<cube>../assets/configs/bullet_test/cube.xml</cube>
+	<cylinder>../assets/configs/bullet_test/cylinder.xml</cylinder>
+	<table>../assets/configs/bullet_test/table.xml</table>
+</config>

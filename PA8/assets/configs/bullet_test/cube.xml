@@ -1,0 +1,15 @@
+<object>
+	<model>../assets/objects/cube.obj</model>
+	<texture>../assets/textures/cube.jpg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>true</kinematic>
+	<shape>box</shape>
+	<location-x>4</location-x>
+	<location-y>1</location-y>
+	<location-z>0</location-z>
+	<width>.5</width>
+	<length>.5</length>
+	<height>.5</height>
+	<scale>1</scale>
+	<mass>0</mass>
+</object>

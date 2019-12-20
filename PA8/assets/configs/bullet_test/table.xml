@@ -1,0 +1,12 @@
+<object>
+	<model>../assets/objects/tray.obj</model>
+	<texture>../assets/textures/table.jpg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>false</kinematic>
+	<shape>mesh</shape>
+	<location-x>0</location-x>
+	<location-y>0</location-y>
+	<location-z>0</location-z>
+	<scale>12</scale>
+	<mass>0</mass>
+</object>
