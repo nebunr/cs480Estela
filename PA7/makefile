@@ -4,7 +4,7 @@ UNAME_S := $(shell uname -s)
 # Linux
 ifeq ($(UNAME_S), Linux)
 	CC=g++ 
-	LIBS=-lSDL2 -lGLEW -lGL -lassimp `Magick++-config --cppflags --cxxflags --ldflags --libs `#-lMagick++-6.Q16
+	LIBS=-lSDL2 -lGLEW -lGL -lassimp `Magick++-config --cppflags --cxxflags --ldflags --libs` #-lMagick++-6.Q16
 
 # Mac
 else
@@ -16,7 +16,7 @@ endif
 #PATHI=-I/usr/local/include/ 
 #PATHL=-L/usr/local/lib/
 
-#Compiler Flags
+# Compiler Flags
 CXXFLAGS=-g -Wall -std=c++0x `Magick++-config --cppflags --cxxflags --ldflags --libs`
 
 
