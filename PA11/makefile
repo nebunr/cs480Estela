@@ -4,14 +4,14 @@ UNAME_S := $(shell uname -s)
 # Linux
 ifeq ($(UNAME_S), Linux)
 	CC=g++
-	LIBS=-lSDL2 -lGLEW -lGL -lassimp `Magick++-config --cppflags --cxxflags --ldflags --libs` -lBulletDynamics -lBulletSoftBody -lBulletCollision -lLinearMath
+	LIBS=-lSDL2 -lGLEW -lGL -lassimp `Magick++-config --cppflags --cxxflags --ldflags --libs` -lBulletDynamics -lBulletSoftBody -lBulletCollision -lLinearMath #-lMagick++-6.Q16
 # Mac
 else
 	CC=clang++
 	LIBS=-lSDL2 -framework OpenGL -framework Cocoa -lGLEW -stdlib=libc++ -lassimp
 endif
 
-#Compiler Flags
+# Compiler Flags
 CXXFLAGS=-g -Wall -Wformat -std=c++0x `Magick++-config --cppflags --cxxflags --ldflags --libs`
 
 # .o Compilation

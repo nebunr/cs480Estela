@@ -1,0 +1,23 @@
+<object>
+	<model>../assets/objects/board.obj</model>
+	<texture>../assets/textures/blue.jpeg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>false</kinematic>
+	<shape>mesh</shape>
+	<location-x>0</location-x>
+	<location-y>0</location-y>
+	<location-z>0</location-z>
+	<diffuse-r>1</diffuse-r>
+	<diffuse-g>1</diffuse-g>
+	<diffuse-b>1</diffuse-b>
+	<specular-r>1</specular-r>
+	<specular-g>1</specular-g>
+	<specular-b>1</specular-b>
+	<ambient-r>1</ambient-r>
+	<ambient-g>1</ambient-g>
+	<ambient-b>1</ambient-b>
+	<restitution>0.5</restitution>
+	<scale>3</scale>
+	<mass>0</mass>
+	<shininess>0</shininess>
+</object>

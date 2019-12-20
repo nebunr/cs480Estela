@@ -1,0 +1,17 @@
+<table-config>
+	<table>../assets/configs/bullet_test/table.xml</table>
+	<bumpers>
+		<b1>../assets/configs/bullet_test/bumper1.xml</b1>
+		<b2>../assets/configs/bullet_test/bumper2.xml</b2>
+		<b3>../assets/configs/bullet_test/bumper3.xml</b3>
+		<b4>../assets/configs/bullet_test/bumper4.xml</b4>
+		<b5>../assets/configs/bullet_test/bumper5.xml</b5>
+	</bumpers>
+	<left-flippers>
+		<f1>../assets/configs/bullet_test/lflipper.xml</f1>
+	</left-flippers>
+	<right-flippers>
+		<f1>../assets/configs/bullet_test/rflipper.xml</f1>
+	</right-flippers>
+	<ball>../assets/configs/bullet_test/ball.xml</ball>
+</table-config>

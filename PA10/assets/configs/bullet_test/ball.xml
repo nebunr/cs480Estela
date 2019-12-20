@@ -1,0 +1,25 @@
+<object>
+	<model>../assets/objects/ball.obj</model>
+	<texture>../assets/textures/ball.jpg</texture>
+	<dynamic>true</dynamic>
+	<kinematic>false</kinematic>
+	<shape>sphere</shape>
+	<radius>1</radius>
+	<location-x>14.6</location-x>
+	<location-y>3.5</location-y>
+	<location-z>22.8</location-z>
+	<restitution>0.5</restitution>
+	<friction>0.02</friction>
+	<diffuse-r>1</diffuse-r>
+	<diffuse-g>1</diffuse-g>
+	<diffuse-b>1</diffuse-b>
+	<specular-r>1</specular-r>
+	<specular-g>1</specular-g>
+	<specular-b>1</specular-b>
+	<ambient-r>1</ambient-r>
+	<ambient-g>1</ambient-g>
+	<ambient-b>1</ambient-b>
+	<scale>1</scale>
+	<shininess>15</shininess>
+	<mass>20</mass>
+</object>

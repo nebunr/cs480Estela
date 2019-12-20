@@ -1,0 +1,32 @@
+<config>
+	<vshader1>../assets/shaders/per-fragment/vshader</vshader1>
+	<fshader1>../assets/shaders/per-fragment/fshader</fshader1>
+	<vshader2>../assets/shaders/per-vertex/vshader</vshader2>
+	<fshader2>../assets/shaders/per-vertex/fshader</fshader2>
+	<vshader3>../assets/shaders/passthrough/vshader</vshader3>
+	<fshader3>../assets/shaders/passthrough/fshader</fshader3>
+
+	<ambient-r>1.0</ambient-r>
+	<ambient-g>1.0</ambient-g>
+	<ambient-b>1.0</ambient-b>
+	<ambient-intensity>.5</ambient-intensity>
+	<specular-intensity>0</specular-intensity>
+
+	<spotlight-location-x>0</spotlight-location-x>
+	<spotlight-location-y>10</spotlight-location-y>
+	<spotlight-location-z>0</spotlight-location-z>
+	<spotlight-r>1</spotlight-r>
+	<spotlight-g>1.0</spotlight-g>
+	<spotlight-b>1</spotlight-b>
+	<spotlight-intensity>90</spotlight-intensity>
+	<spotlight-cutoff>7</spotlight-cutoff>
+
+	<windowname>bullet-test</windowname>
+	<w>1024</w>
+	<h>768</h>
+	<table-config>../assets/configs/bullet_test/table-config.xml</table-config>
+
+	<extra-score>1000</extra-score>
+	<start-score>0</start-score>
+	<start-lives>3</start-lives>
+</config>
