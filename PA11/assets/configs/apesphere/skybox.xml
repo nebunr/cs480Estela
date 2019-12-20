@@ -1,0 +1,13 @@
+<object>
+	<model>../assets/objects/cube.obj</model>
+	<texture>../assets/textures/skyBox1.jpg</texture>
+	<shape>skybox</shape>
+	<kinematic>true</kinematic>
+	<scale>2000</scale>
+	<mass>0</mass>
+	<level1-pos>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</level1-pos>
+</object>

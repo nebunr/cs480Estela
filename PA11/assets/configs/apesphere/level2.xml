@@ -1,0 +1,16 @@
+<object>
+	<model>../assets/objects/level2.obj</model>
+	<texture>../assets/textures/checkerboard2.png</texture>
+	<shape>mesh</shape>
+	<kinematic>false</kinematic>
+	<scale>2</scale>
+	<mass>0</mass>
+	<friction>5.5</friction>
+	<shininess>10</shininess>
+	<restitution>1</restitution>
+	<level1-pos>
+		<x>-150</x>
+		<y>25</y>
+		<z>0</z>
+	</level1-pos>
+</object>

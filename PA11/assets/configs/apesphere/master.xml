@@ -1,0 +1,22 @@
+<config>
+	<vshader>../assets/shaders/per-fragment/vshader</vshader>
+	<fshader>../assets/shaders/per-fragment/fshader</fshader>
+	<windowname>ApeSphere</windowname>
+	<w>1024</w>
+	<h>768</h>
+	<scoreboard>../assets/configs/apesphere/scoreboard.xml</scoreboard>
+	<ambient-r>1.0</ambient-r>
+	<ambient-g>1.0</ambient-g>
+	<ambient-b>1.0</ambient-b>
+	<ambient-intensity>0.8</ambient-intensity>
+	<specular-intensity>0.5</specular-intensity>
+
+	<spotlight-location-x>0</spotlight-location-x>
+	<spotlight-location-y>10</spotlight-location-y>
+	<spotlight-location-z>0</spotlight-location-z>
+	<spotlight-r>1</spotlight-r>
+	<spotlight-g>1.0</spotlight-g>
+	<spotlight-b>1</spotlight-b>
+	<spotlight-intensity>0</spotlight-intensity>
+	<spotlight-cutoff>7</spotlight-cutoff>
+</config>

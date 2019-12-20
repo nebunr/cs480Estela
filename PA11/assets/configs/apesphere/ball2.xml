@@ -1,0 +1,13 @@
+<object>
+	<model>../assets/objects/ball.obj</model>
+	<texture>../assets/textures/orange.jpeg</texture>
+	<shape>sphere</shape>
+	<kinematic>false</kinematic>
+	<scale>1</scale>
+	<mass>10</mass>
+	<position>
+		<x>0</x>
+		<y>8</y>
+		<z>0</z>
+	</position>
+</object>

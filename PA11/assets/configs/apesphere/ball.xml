@@ -1,0 +1,26 @@
+<object>
+	<model>../assets/objects/ball.obj</model>
+	<texture>../assets/textures/legoboi.png</texture>
+	<shape>sphere</shape>
+	<kinematic>false</kinematic>
+	<scale>1</scale>
+	<friction>0.25</friction>
+	<shininess>40</shininess>
+	<restitution>0.25</restitution>
+	<mass>10</mass>
+	<level1-pos>
+		<x>0</x>
+		<y>4</y>
+		<z>0</z>
+	</level1-pos>
+	<level2-pos>
+		<x>-150</x>
+		<y>29</y>
+		<z>0</z>
+	</level2-pos>
+	<level3-pos>
+		<x>-220</x>
+		<y>30</y>
+		<z>0</z>
+	</level3-pos>
+</object>

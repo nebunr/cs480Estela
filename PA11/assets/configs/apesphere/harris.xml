@@ -1,0 +1,16 @@
+<object>
+	<model>../assets/objects/harrisPlane.obj</model>
+	<texture>../assets/textures/harris.jpg</texture>
+	<shape>mesh</shape>
+	<kinematic>false</kinematic>
+	<scale>2</scale>
+	<mass>0</mass>
+	<friction>5.5</friction>
+	<shininess>1</shininess>
+	<restitution>1</restitution>
+	<level1-pos>
+		<x>-256</x>
+		<y>28</y>
+		<z>-1</z>
+	</level1-pos>
+</object>
