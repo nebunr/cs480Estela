@@ -1,0 +1,25 @@
+<object>
+	<model>../assets/objects/cube.obj</model>
+	<texture>../assets/textures/cube.jpg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>true</kinematic>
+	<shape>box</shape>
+	<location-x>5</location-x>
+	<location-y>1.5</location-y>
+	<location-z>0</location-z>
+	<width>1</width>
+	<length>1</length>
+	<height>1</height>
+	<diffuse-r>1</diffuse-r>
+	<diffuse-g>1</diffuse-g>
+	<diffuse-b>1</diffuse-b>
+	<specular-r>1</specular-r>
+	<specular-g>1</specular-g>
+	<specular-b>1</specular-b>
+	<ambient-r>1</ambient-r>
+	<ambient-g>1</ambient-g>
+	<ambient-b>1</ambient-b>
+	<scale>1</scale>
+	<mass>0</mass>
+	<shininess>2</shininess>
+</object>

@@ -1,0 +1,27 @@
+#version 330
+
+layout (location = 0) in vec3 v_position;
+layout (location = 1) in vec2 v_texture_coordinates;
+layout (location = 2) in vec3 v_normal;
+
+out vec2 texture_coordinates;
+out vec3 world_position;
+out vec3 normal;
+out vec3 eye;
+out vec3 spotlightDirection;
+
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 modelMatrix;
+uniform mat4 modelViewMatrix;
+
+void main(void){
+  vec4 v = vec4(v_position, 1.0);
+  gl_Position = (projectionMatrix * modelViewMatrix) * v;
+  
+  world_position = (modelMatrix * vec4(v_position, 1.0)).xyz;
+  eye = vec3(0,0,0) - world_position;
+  
+  normal = (modelViewMatrix * vec4(v_normal,0.0)).xyz;
+  texture_coordinates = v_texture_coordinates;
+}

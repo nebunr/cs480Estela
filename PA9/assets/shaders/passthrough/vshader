@@ -1,0 +1,27 @@
+#version 330
+
+layout (location = 0) in vec3 v_position;
+layout (location = 1) in vec2 v_texture_coordinates;
+layout (location = 2) in vec3 v_normal;
+
+out vec2 texture_coordinates;
+out vec4 color;
+
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform mat4 modelMatrix;
+uniform mat4 modelViewMatrix;
+uniform vec4 AmbientProduct;
+uniform vec4 DiffuseProduct;
+uniform vec4 SpecularProduct;
+uniform vec3 lightPosition;
+
+uniform float shininess;
+
+void main(void){
+  gl_Position = (projectionMatrix * modelViewMatrix) * vec4(v_position,1.0);
+  color = vec4(1.0);
+  color.a = 1.0;
+
+  texture_coordinates = v_texture_coordinates;
+}

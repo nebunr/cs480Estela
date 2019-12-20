@@ -1,0 +1,22 @@
+<object>
+	<model>../assets/objects/cylinder.obj</model>
+	<texture>../assets/textures/cylinder.jpg</texture>
+	<dynamic>false</dynamic>
+	<kinematic>false</kinematic>
+	<shape>mesh</shape>
+	<location-x>-10</location-x>
+	<location-y>1</location-y>
+	<location-z>-4</location-z>
+	<scale>.75</scale>
+	<mass>0</mass>
+	<diffuse-r>1</diffuse-r>
+	<diffuse-g>1</diffuse-g>
+	<diffuse-b>1</diffuse-b>
+	<specular-r>1</specular-r>
+	<specular-g>1</specular-g>
+	<specular-b>1</specular-b>
+	<ambient-r>1</ambient-r>
+	<ambient-g>1</ambient-g>
+	<ambient-b>1</ambient-b>
+	<shininess>0.5</shininess>
+</object>
