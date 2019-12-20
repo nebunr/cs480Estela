@@ -1,0 +1,10 @@
+<config>
+	<vshader>../assets/shaders/vshader</vshader>
+	<fshader>../assets/shaders/fshader</fshader>
+	<windowname>Solar System :)</windowname>
+	<w>1024</w>
+	<h>768</h>
+	<root>../assets/configs/small_sun/sun.xml</root>
+	<oscale>.25</oscale>
+	<pscale>1.39</pscale>
+</config>

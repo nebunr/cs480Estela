@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Despina</name>
+	<ospeed>0.0501</ospeed>
+	<oangle>90</oangle>
+    <oaxis>0.89</oaxis>
+	<odistance>77</odistance>
+	<opaused>false</opaused>
+	<rspeed>-0.1305</rspeed>
+	<rangle>51</rangle>
+	<raxis>15</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.211</scale>
+</planet>

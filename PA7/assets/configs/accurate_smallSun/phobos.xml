@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/mar1kuu2-copy-428-321.jpg</texture>
+	<name>Phobos</name>
+	<ospeed>0.095028</ospeed>
+	<oangle>11</oangle>
+    <oaxis>1.788</oaxis>
+	<odistance>10</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.04275</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.64116</scale>
+</planet>

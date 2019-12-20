@@ -1,0 +1,11 @@
+<config>
+	<vshader>../assets/shaders/vshader</vshader>
+	<fshader>../assets/shaders/fshader</fshader>
+	<windowname>Solar System :)</windowname>
+	<w>1600</w>
+	<h>900</h>
+	<root>../assets/configs/realistic/sun.xml</root>
+	<oscale>.00925309182</oscale>
+	<pscale>.00925309182</pscale>
+	<tscale>1</tscale>
+</config>

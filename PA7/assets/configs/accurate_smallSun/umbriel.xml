@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/universe_sandbox_2_mimas_map_by_magentameteorite_dc3yhup-200h.jpg</texture>
+	<name>Umbriel</name>
+	<ospeed>0.00467</ospeed>
+	<oangle>52</oangle>
+    <oaxis>0.36</oaxis>
+	<odistance>90</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.8858</rspeed>
+	<rangle>16</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.726642</scale>
+</planet>

@@ -1,0 +1,23 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_uranus.jpg</texture>
+	<name>Uranus</name>
+	<ospeed>0.0681</ospeed>
+	<oangle>306.21</oangle>
+	<odistance>1784</odistance>
+	<oaxis>0.77</oaxis>
+	<opaused>false</opaused>
+	<rspeed>-0.058005</rspeed>
+	<rangle>0</rangle>
+	<raxis>97.77</raxis>
+	<rpaused>false</rpaused>
+	<satelites>
+		<s1>../assets/configs/accurate_smallSun/urings.xml</s1>
+		<s2>../assets/configs/accurate_smallSun/titania.xml</s2>	
+		<s3>../assets/configs/accurate_smallSun/oberon.xml</s3>	
+		<s4>../assets/configs/accurate_smallSun/miranda.xml</s4>	
+		<s5>../assets/configs/accurate_smallSun/ariel.xml</s5>	
+		<s6>../assets/configs/accurate_smallSun/umbriel.xml</s6>		
+	</satelites>
+	<scale>15.759</scale>
+</planet>

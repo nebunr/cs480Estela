@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Thalassa</name>
+	<ospeed>0.07882</ospeed>
+	<oangle>355</oangle>
+    <oaxis>61</oaxis>
+	<odistance>83</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.1521</rspeed>
+	<rangle>111</rangle>
+	<raxis>61</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.281</scale>
+</planet>

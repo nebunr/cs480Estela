@@ -1,0 +1,19 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_mars.jpg</texture>
+	<name>Mars</name>
+	<ospeed>0.24077</ospeed>
+	<oangle>63.06</oangle>
+	<oaxis>1.85</oaxis>
+	<odistance>142</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.040612269</rspeed>
+	<rangle>0</rangle>
+	<raxis>25.19</raxis>
+	<rpaused>false</rpaused>
+	<satelites>
+		<s1>../assets/configs/scaled/deimos.xml</s1>
+		<s2>../assets/configs/scaled/phobos.xml</s2>
+	</satelites>
+	<scale>2.1061</scale>
+</planet>

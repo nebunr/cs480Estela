@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/221.jpg</texture>
+	<name>Titan</name>
+	<ospeed>0.00558</ospeed>
+    <oaxis>0.34854</oaxis>
+	<oangle>71</oangle>
+	<odistance>260</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.00558</rspeed>
+	<rangle>201</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>3.201</scale>
+</planet>

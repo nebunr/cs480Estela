@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Rings_Jupiter.obj</model>
+	<texture>../assets/textures/2k_jupiter_rings.png</texture>
+	<name>Jupiter-ring</name>
+	<ospeed>0</ospeed>
+	<oangle>0</oangle>
+	<raxis>3.13</raxis>
+	<oaxis>0</oaxis>
+	<odistance>0</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.100757</rspeed>
+	<rangle>0</rangle>
+	<rpaused>false</rpaused>
+	<scale>20</scale>
+</planet>

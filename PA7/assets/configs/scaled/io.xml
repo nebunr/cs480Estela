@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/09_06.jpg</texture>
+	<name>Io</name>
+	<ospeed>0.01734</ospeed>
+	<oangle>352</oangle>
+    <oaxis>0.04</oaxis>
+	<odistance>150</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.007488</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>2.264</scale>
+</planet>

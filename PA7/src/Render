@@ -1,0 +1,3 @@
+graphics.cpp:  std::vector<Object*> sat = m_cube->getSatelites();
+graphics.cpp:  glUniformMatrix4fv(m_modelMatrix, 1, GL_FALSE, glm::value_ptr(m_cube->GetModel()));
+graphics.cpp:  m_cube->Render();

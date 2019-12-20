@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_venus_surface.jpg</texture>
+	<name>Venus</name>
+	<ospeed>.3502</ospeed>
+	<oangle>329.47</oangle>
+	<oaxis>3.39</oaxis>
+	<odistance>67</odistance>
+	<opaused>false</opaused>
+	<rspeed>-.00001713</rspeed>
+	<rangle>0</rangle>
+	<raxis>2.64</raxis>
+	<rpaused>false</rpaused>
+	<scale>3.7604</scale>
+</planet>

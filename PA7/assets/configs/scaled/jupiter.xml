@@ -1,0 +1,22 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_jupiter.jpg</texture>
+	<name>Jupiter</name>
+	<oaxis>1.31</oaxis>
+	<ospeed>0.1307</ospeed>
+	<oangle>308.22</oangle>
+	<odistance>483</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.100757</rspeed>
+	<rangle>0</rangle>
+	<raxis>3.13</raxis>
+	<rpaused>false</rpaused>
+	<satelites>
+		<s1>../assets/configs/scaled/jrings.xml</s1>
+		<s2>../assets/configs/scaled/io.xml</s2>
+		<s3>../assets/configs/scaled/europa.xml</s3>
+		<s4>../assets/configs/scaled/ganymede.xml</s4>
+		<s5>../assets/configs/scaled/callisto.xml</s5>
+	</satelites>
+	<scale>25</scale>
+</planet>

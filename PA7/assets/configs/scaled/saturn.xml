@@ -1,0 +1,19 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_saturn.jpg</texture>
+	<name>Saturn</name>
+	<ospeed>0.0969</ospeed>
+	<oangle>246.21</oangle>
+	<oaxis>2.49</oaxis>
+	<odistance>890</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.09384</rspeed>
+	<rangle>0</rangle>
+	<raxis>26.73</raxis>
+	<rpaused>false</rpaused>
+	<scale>22</scale>
+	<satelites>
+		<s1>../assets/configs/scaled/sring.xml</s1>
+		<s2>../assets/configs/scaled/titan.xml</s2>
+	</satelites>
+</planet>

@@ -1,0 +1,18 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_earth_daymap.jpg</texture>
+	<name>Earth</name>
+	<ospeed>0.2978</ospeed>
+	<oangle>278.26</oangle>
+	<odistance>96</odistance>
+	<oaxis>1.6</oaxis>
+	<opaused>false</opaused>
+	<rspeed>0.04167</rspeed>
+	<rangle>0</rangle>
+	<raxis>23.44</raxis>
+	<rpaused>false</rpaused>
+	<scale>3.9588</scale>
+	<satelites>
+		<s1>../assets/configs/scaled/moon.xml</s1>
+	</satelites>
+</planet>

@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Galatea</name>
+	<ospeed>0.321</ospeed>
+	<oangle>289</oangle>
+    <oaxis>3.5</oaxis>
+	<odistance>66</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.4321</rspeed>
+	<rangle>12</rangle>
+	<raxis>1</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.261</scale>
+</planet>

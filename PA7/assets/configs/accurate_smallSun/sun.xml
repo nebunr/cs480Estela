@@ -1,0 +1,25 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_sun.jpg</texture>
+	<name>Sun</name>
+	<ospeed>0</ospeed>
+	<oangle>0</oangle>
+	<odistance>0</odistance>
+	<opaused>false</opaused>
+	<rspeed>.001641</rspeed>
+	<rangle>0</rangle>
+	<raxis>7.25</raxis>
+	<rpaused>false</rpaused>
+	<scale>10</scale>
+	<satelites>
+		<s1>../assets/configs/accurate_smallSun/mercury.xml</s1>
+		<s2>../assets/configs/accurate_smallSun/venus.xml</s2>
+		<s3>../assets/configs/accurate_smallSun/earth.xml</s3>
+		<s4>../assets/configs/accurate_smallSun/mars.xml</s4>
+		<s5>../assets/configs/accurate_smallSun/jupiter.xml</s5>
+		<s6>../assets/configs/accurate_smallSun/saturn.xml</s6>
+		<s7>../assets/configs/accurate_smallSun/neptune.xml</s7>
+		<s8>../assets/configs/accurate_smallSun/uranus.xml</s8>
+		<s9>../assets/configs/accurate_smallSun/pluto.xml</s9>
+	</satelites>
+</planet>

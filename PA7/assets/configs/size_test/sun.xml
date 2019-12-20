@@ -1,0 +1,16 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_sun.jpg</texture>
+	<name>sun</name>
+	<ospeed>0</ospeed>
+	<oangle>0</oangle>
+	<odistance>0</odistance>
+	<opaused>false</opaused>
+	<rspeed>-1.5</rspeed>
+	<rangle>0</rangle>
+	<rpaused>false</rpaused>
+	<scale>15</scale>
+	<satelites>
+		<s1>../assets/configs/size_test/mercury.xml</s1>
+	</satelites>
+</planet>

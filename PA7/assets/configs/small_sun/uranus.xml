@@ -1,0 +1,13 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_uranus.jpg</texture>
+	<name>Uranus</name>
+	<ospeed>0</ospeed>
+	<oangle>2.4</oangle>
+	<odistance>1784</odistance>
+	<opaused>false</opaused>
+	<rspeed>0</rspeed>
+	<rangle>0</rangle>
+	<rpaused>false</rpaused>
+	<scale>15.759</scale>
+</planet>

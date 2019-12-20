@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Nereid</name>
+	<ospeed>0.0077272</ospeed>
+	<oangle>12</oangle>
+    <oaxis>15</oaxis>
+	<odistance>65</odistance>
+	<opaused>false</opaused>
+	<rspeed>-0.111</rspeed>
+	<rangle>341</rangle>
+	<raxis>165</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.190</scale>
+</planet>

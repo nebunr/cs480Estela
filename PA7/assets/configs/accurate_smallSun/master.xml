@@ -1,0 +1,10 @@
+<config>
+	<vshader>../assets/shaders/vshader</vshader>
+	<fshader>../assets/shaders/fshader</fshader>
+	<windowname>Solar System: For Accurate with a Small Sun (1024x768)</windowname>
+	<w>1024</w>
+	<h>768</h>
+	<root>../assets/configs/accurate_smallSun/sun.xml</root>
+	<oscale>.25</oscale>
+	<pscale>1.39</pscale>
+</config>

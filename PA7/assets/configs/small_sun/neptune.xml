@@ -1,0 +1,13 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_neptune.jpg</texture>_
+	<name>Neptune</name>
+	<ospeed>0</ospeed>
+	<oangle>2.1</oangle>
+	<odistance>2793</odistance>
+	<opaused>false</opaused>
+	<rspeed>0</rspeed>
+	<rangle>0</rangle>
+	<rpaused>false</rpaused>
+	<scale>15.299</scale>
+</planet>

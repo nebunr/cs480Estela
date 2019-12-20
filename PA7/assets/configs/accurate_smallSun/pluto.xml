@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_pluto_imagiined.jpg</texture>
+	<name>Pluto</name>
+	<ospeed>0.04749</ospeed>
+	<oangle>5.35</oangle>
+	<oaxis>120</oaxis>
+	<odistance>3170</odistance>
+	<opaused>false</opaused>
+	<rspeed>-0.006523</rspeed>
+	<rangle>0</rangle>
+	<raxis>57.47</raxis>
+	<rpaused>false</rpaused>
+	<scale>4</scale>
+</planet>

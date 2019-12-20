@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/oberon.jpg</texture>
+	<name>Oberon</name>
+	<ospeed>0.00315</ospeed>
+	<oangle>111</oangle>
+    <oaxis>0.1</oaxis>
+	<odistance>105</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.0411</rspeed>
+	<rangle>11</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.94624</scale>
+</planet>

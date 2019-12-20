@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/Miranda-0.jpg</texture>
+	<name>Miranda</name>
+	<ospeed>0.00666</ospeed>
+	<oangle>262</oangle>
+    <oaxis>0.1</oaxis>
+	<odistance>80</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.0001021</rspeed>
+	<rangle>334</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.491</scale>
+</planet>

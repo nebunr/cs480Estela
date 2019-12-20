@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/Ganymede_Reworked.webp</texture>
+	<name>Ganymede</name>
+	<ospeed>0.01734</ospeed>
+	<oangle>32</oangle>
+    <oaxis>0.195</oaxis>
+	<odistance>225</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.002674</rspeed>
+	<rangle>180</rangle>
+	<raxis>0.33</raxis>
+	<rpaused>false</rpaused>
+	<scale>3.27</scale>
+</planet>

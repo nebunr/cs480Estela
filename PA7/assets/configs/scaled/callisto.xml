@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/callisto_color_map_by_kexitt_d9rpnxz-fullview.jpg</texture>
+	<name>Callisto</name>
+	<ospeed>0.00821</ospeed>
+	<oangle>155</oangle>
+    <oaxis>0.281</oaxis>
+	<odistance>265</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.00105</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>2.9954</scale>
+</planet>

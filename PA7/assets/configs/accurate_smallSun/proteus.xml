@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Proteus</name>
+	<ospeed>0.109</ospeed>
+	<oangle>171</oangle>
+    <oaxis>32</oaxis>
+	<odistance>75</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.0781</rspeed>
+	<rangle>51</rangle>
+	<raxis>10</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.144</scale>
+</planet>

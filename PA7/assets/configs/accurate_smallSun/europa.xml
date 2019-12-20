@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/index.jpeg</texture>
+	<name>Europa</name>
+	<ospeed>0.01374</ospeed>
+	<oangle>278</oangle>
+    <oaxis>0.47</oaxis>
+	<odistance>190</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.003196</rspeed>
+	<rangle>241</rangle>
+	<raxis>0.016</raxis>
+	<rpaused>false</rpaused>
+	<scale>1.9397375</scale>
+</planet>

@@ -1,0 +1,14 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Moon</name>
+	<ospeed>0.3683</ospeed>
+	<oangle>88.29</oangle>
+	<odistance>17</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.00154321</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>1.0794</scale>
+</planet>

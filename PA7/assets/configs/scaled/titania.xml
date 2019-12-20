@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/dccgm21-0328c017-4a38-4ba5-82ec-581b8e898d21.jpg</texture>
+	<name>Titania</name>
+	<ospeed>0.0364</ospeed>
+	<oangle>314</oangle>
+    <oaxis>0.34</oaxis>
+	<odistance>95</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.36277902</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.98</scale>
+</planet>

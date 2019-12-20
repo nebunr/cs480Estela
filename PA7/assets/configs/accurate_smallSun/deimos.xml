@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/201.jpg</texture>
+	<name>Deimos</name>
+	<ospeed>0.375855</ospeed>
+	<oangle>120</oangle>
+    <oaxis>1.788</oaxis>
+	<odistance>15</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.04275</rspeed>
+	<rangle>180</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.3639</scale>
+</planet>

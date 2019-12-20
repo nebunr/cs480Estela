@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Mercury</name>
+	<ospeed>0</ospeed>
+	<oangle>1.2</oangle>
+	<odistance>36</odistance>
+	<oaxis>0</oaxis>
+	<opaused>false</opaused>
+	<rspeed>0</rspeed>
+	<rangle>0</rangle>
+	<raxis>27</raxis>
+	<rpaused>false</rpaused>
+	<scale>1.516</scale>
+</planet>

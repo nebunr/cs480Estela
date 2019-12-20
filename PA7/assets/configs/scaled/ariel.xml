@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/Ariel-0.jpg</texture>
+	<name>Ariel</name>
+	<ospeed>0.00552</ospeed>
+	<oangle>251</oangle>
+    <oaxis>0.31</oaxis>
+	<odistance>85</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.000167</rspeed>
+	<rangle>82</rangle>
+	<raxis>0</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.71943</scale>
+</planet>

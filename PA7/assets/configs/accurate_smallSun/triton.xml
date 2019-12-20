@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/triton07_sk12.jpg</texture>
+	<name>Triton</name>
+	<ospeed>0.0439</ospeed>
+	<oangle>250</oangle>
+    <oaxis>40</oaxis>
+	<odistance>80</odistance>
+	<opaused>false</opaused>
+	<rspeed>-0.0533556</rspeed>
+	<rangle>180</rangle>
+	<raxis>157</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.84</scale>
+</planet>

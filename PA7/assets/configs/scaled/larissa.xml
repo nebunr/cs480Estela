@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_moon.jpg</texture>
+	<name>Larissa</name>
+	<ospeed>0.1212</ospeed>
+	<oangle>123</oangle>
+    <oaxis>61</oaxis>
+	<odistance>60</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.05123</rspeed>
+	<rangle>71</rangle>
+	<raxis>0.51</raxis>
+	<rpaused>false</rpaused>
+	<scale>0.171</scale>
+</planet>

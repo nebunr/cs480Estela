@@ -1,0 +1,15 @@
+<planet>
+	<model>../assets/objects/Rings_Neptune.obj</model>
+	<texture>../assets/textures/2k_neptune_rings.png</texture>
+	<name>Neptune-ring</name>
+	<ospeed>0</ospeed>
+	<oangle>0</oangle>
+	<raxis>28.32</raxis>
+	<oaxis>0</oaxis>
+	<odistance>0</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.06204</rspeed>
+	<rangle>0</rangle>
+	<rpaused>false</rpaused>
+	<scale>10</scale>
+</planet>

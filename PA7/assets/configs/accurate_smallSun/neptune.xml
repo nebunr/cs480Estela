@@ -1,0 +1,19 @@
+<planet>
+	<model>../assets/objects/Planet.obj</model>
+	<texture>../assets/textures/2k_neptune.jpg</texture>_
+	<name>Neptune</name>
+	<ospeed>0.0543</ospeed>
+	<oangle>358.54</oangle>
+	<odistance>2793</odistance>
+	<opaused>false</opaused>
+	<rspeed>0.06204</rspeed>
+	<rangle>0</rangle>
+	<raxis>28.32</raxis>
+	<oaxis>1.77</oaxis>
+	<rpaused>false</rpaused>
+	<satelites>
+		<s1>../assets/configs/accurate_smallSun/nrings.xml</s1>
+		<s2>../assets/configs/accurate_smallSun/triton.xml</s2>
+	</satelites>
+	<scale>15.299</scale>
+</planet>
