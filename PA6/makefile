@@ -24,32 +24,32 @@ CXXFLAGS=-g -Wall -std=c++0x #`Magick++-config --cppflags --cxxflags --ldflags -
 O_FILES=main.o camera.o engine.o graphics.o object.o shader.o window.o
 
 # Point to includes of local directories
-INDLUDES=-I../include #-I/usr/include/x86_64-linux-gnu/ImageMagick-6/ -I/usr/include/ImageMagick-6/
+INCLUDES=-I../include #-I/usr/include/x86_64-linux-gnu/ImageMagick-6/ -I/usr/include/ImageMagick-6/
 
 
 all: $(O_FILES)
 	$(CC) $(CXXFLAGS) -o PA6 $(O_FILES) $(LIBS) #$(PATHI) $(PATHL)
 
 main.o: ../src/main.cpp
-	$(CC) $(CXXFLAGS) -c ../src/main.cpp -o main.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/main.cpp -o main.o $(INCLUDES)
 
 camera.o: ../src/camera.cpp
-	$(CC) $(CXXFLAGS) -c ../src/camera.cpp -o camera.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/camera.cpp -o camera.o $(INCLUDES)
 
 engine.o: ../src/engine.cpp
-	$(CC) $(CXXFLAGS) -c ../src/engine.cpp -o engine.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/engine.cpp -o engine.o $(INCLUDES)
 
 graphics.o: ../src/graphics.cpp
-	$(CC) $(CXXFLAGS) -c ../src/graphics.cpp -o graphics.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/graphics.cpp -o graphics.o $(INCLUDES)
 
 object.o: ../src/object.cpp
-	$(CC) $(CXXFLAGS) -c ../src/object.cpp -o object.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/object.cpp -o object.o $(INCLUDES)
 
 shader.o: ../src/shader.cpp
-	$(CC) $(CXXFLAGS) -c ../src/shader.cpp -o shader.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/shader.cpp -o shader.o $(INCLUDES)
 
 window.o: ../src/window.cpp
-	$(CC) $(CXXFLAGS) -c ../src/window.cpp -o window.o $(INDLUDES)
+	$(CC) $(CXXFLAGS) -c ../src/window.cpp -o window.o $(INCLUDES)
 
 clean:
 	-@if rm *.o PA6 2>/dev/null || true; then echo "Main Removed"; else echo "No Main"; fi
