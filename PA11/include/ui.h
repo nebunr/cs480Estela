@@ -44,13 +44,13 @@ class Ui
         bool showHighScoreRead;
         bool showHighScore;
 
-	    std::vector<Score> scores;
+        std::vector<Score> scores;
 
         float time;
         int score;
         int lives;
         int level;
-	    char* scoreboard_filename;
+        char* scoreboard_filename;
         std::string name;
 };
 

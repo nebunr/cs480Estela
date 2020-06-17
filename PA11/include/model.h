@@ -27,7 +27,6 @@ class Model{
 		GLuint vertex_buffer;
 		GLuint index_buffer;
 		btTriangleMesh* triangle_mesh;
-
 };
 
 #endif //MODEL_H

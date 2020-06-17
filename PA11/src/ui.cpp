@@ -237,7 +237,7 @@ void Ui::Render(SDL_Window* window, unsigned int dt, bool died, bool win, bool &
             }
             else
             {
-               showWin = true;
+                showWin = true;
             }
         }
 
@@ -273,7 +273,7 @@ void Ui::Render(SDL_Window* window, unsigned int dt, bool died, bool win, bool &
         {
             ImGui::SetNextWindowPos(ImVec2( io.DisplaySize.x * 0.5f, io.DisplaySize.y * 0.5f ), ImGuiCond_Always, ImVec2(0.5f, 0.5f));
             ImGui::SetNextWindowSize( ImVec2(210, 125));
- 
+
             ImGui::Begin("Pause");
 
             //Return to game

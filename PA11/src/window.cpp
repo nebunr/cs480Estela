@@ -61,7 +61,15 @@ bool Window::Initialize(char *name, int *w, int *h)
 	if (SDL_GL_SetSwapInterval(1) < 0)
 	{
 		printf("Unable to use VSync: %s\n", SDL_GetError());
-		return false;
+		return false; 
+		/*
+			Comment out to the above to run with graphics cards that may have no appropriate drivers.
+			Might be useful for running on virtual machines. 
+			Still, do lookup why SDL_GL_SetSwapInterval(1) < 0 is returning true for your machine.
+			SDL_GetError() may print the following for these function parameters:
+			(1) & (0) - That operation is not supported
+			(-1) - Negative swap interval unsupported in this GL
+		*/
 	}
 	return true;
 }

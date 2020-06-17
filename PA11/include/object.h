@@ -64,6 +64,4 @@ class Object{
 		btTriangleMesh* triangle_mesh;
 };
 
-		
-
 #endif //OBJECT_H

@@ -227,34 +227,34 @@ btRigidBody* Object::GetRigidBody(){
 	return body;
 }
 float Object::GetShininess(){
- 	return config.shininess;
+	return config.shininess;
 }
 
 void Object::SetLocationLevel(int level)
 {
-  
-  btTransform newTransform;
 
-  if(level == 0)
-  {
- 	 newTransform.setOrigin(btVector3(config.level1Pos.x, config.level1Pos.y, config.level1Pos.z));
- 	 newTransform.setRotation(btQuaternion(0,1,0,1));
-  }
-  if(level == 1)
-  {
- 	 newTransform.setOrigin(btVector3(config.level2Pos.x, config.level2Pos.y, config.level2Pos.z));
- 	 newTransform.setRotation(btQuaternion(0,1,0,1));
-  }
-  if(level == 2)
-  {
- 	 newTransform.setOrigin(btVector3(config.level3Pos.x, config.level3Pos.y, config.level3Pos.z));
- 	 newTransform.setRotation(btQuaternion(0,1,0,1));  
-  }
+	btTransform newTransform;
 
-  body->setWorldTransform(newTransform);
-  body->setCenterOfMassTransform(newTransform);
-  motion_state->setWorldTransform(newTransform);
-  
+	if(level == 0)
+	{
+		newTransform.setOrigin(btVector3(config.level1Pos.x, config.level1Pos.y, config.level1Pos.z));
+		newTransform.setRotation(btQuaternion(0,1,0,1));
+	}
+	if(level == 1)
+	{
+		newTransform.setOrigin(btVector3(config.level2Pos.x, config.level2Pos.y, config.level2Pos.z));
+		newTransform.setRotation(btQuaternion(0,1,0,1));
+	}
+	if(level == 2)
+	{
+		newTransform.setOrigin(btVector3(config.level3Pos.x, config.level3Pos.y, config.level3Pos.z));
+		newTransform.setRotation(btQuaternion(0,1,0,1));  
+	}
+
+	body->setWorldTransform(newTransform);
+	body->setCenterOfMassTransform(newTransform);
+	motion_state->setWorldTransform(newTransform);
+
 }
 
 //last minute way to check if the ball has fallen into the hole

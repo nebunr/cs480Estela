@@ -8,8 +8,8 @@ int main(int argc, char **argv){
 	Config* cfg = new Config;
 
 	if(!parseCmdArgs(argc,argv,cfg)){
-    	return 0;
-  	}
+		return 0;
+	}
 
 	Engine* engine = new Engine(cfg->window_name, cfg->w, cfg->h);
 	if(!engine->Initialize(*cfg)){
@@ -127,7 +127,7 @@ void loadConfig(char* config_filename, Config* cfg)
 	}
 	if((element = config->FirstChildElement("spotlight-cutoff"))){
 		cfg->spotlightCutoff = element->FloatText();
-  	}
+	}
         if((element = config->FirstChildElement("scoreboard"))){
 		cfg->scoreboard_filename = new char[256];
 		strcpy(cfg->scoreboard_filename, element->GetText());
